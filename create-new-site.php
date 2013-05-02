@@ -35,7 +35,6 @@ class CreateNewSite extends CreateNewSite_Plugin {
 
     public function add_hooks(){
         $this->add_action('bp_setup_nav');
-        $this->add_action('admin_menu');
         $this->add_action('admin_bar_init');
         $this->add_action('wp_enqueue_scripts');
         $this->add_action('wp_ajax_create_new_site');
@@ -62,10 +61,6 @@ class CreateNewSite extends CreateNewSite_Plugin {
                 'user_has_access' => true,
                 'link' => $blogs_link . 'create-new-site/'
         ) );
-    }
-
-    function admin_menu(){
-        $this->dashboard_page_hook = add_dashboard_page('Create New Site', 'Create New Site', 'read', 'create-new-site', array(&$this, 'view_create_new_site_page'));        
     }
 
     public function admin_bar_init(){
