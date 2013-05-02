@@ -19,7 +19,31 @@ define('WP_BLOGS_PER_USER', 5);
 3. Make sure that the 'subnav' div in your Buddypress theme's members/single/blog.php file has the class 'no-ajax' defined, e.g.:
 <div class="item-list-tabs no-ajax" id="subnav" role="navigation">
 
-4. Activate the plugin for the network.
+4. Add the following rules to your Buddypress theme's style.css file (or roll your own):
+
+ /* Create New Site plugin */
+
+ div.buddypress-page p {
+     color: #888888;
+     font-size: 12px;
+     line-height: 220%;
+     margin-bottom: 5px;
+ }
+
+ div.buddypress-page p strong {
+     color: #555555;
+     font-weight: bold;
+ }
+
+ div.buddypress-page table tr td, div.buddypress-page table tr th {
+     vertical-align: top;
+ }
+
+ div.buddypress-page #currentsites {
+     margin-bottom: 30px;
+ }
+
+5. Activate the plugin for the network.
 
 == Changelog ==
 
